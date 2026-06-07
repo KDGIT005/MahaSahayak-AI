@@ -135,24 +135,45 @@ function LoginForm() {
       </div>
 
       {/* Right Panel — Form */}
-      <div className="flex-1 flex items-center justify-center p-8">
+      <div className="flex-1 flex items-center justify-center p-4 sm:p-8 overflow-y-auto">
         <div className="w-full max-w-md">
           <div
-            className="rounded-3xl p-8"
+            className="rounded-2xl sm:rounded-3xl p-5 sm:p-8"
             style={{
               background: 'white',
               boxShadow: '0 32px 80px rgba(0,0,0,0.4)',
             }}
           >
-            <h1 className="text-2xl font-black mb-1" style={{ color: '#1E3A5F' }}>
+            {/* Mobile-only back + branding */}
+            <div className="flex items-center justify-between mb-4 lg:hidden">
+              <button
+                onClick={() => router.push('/')}
+                className="flex items-center gap-1.5 text-xs font-medium"
+                style={{ color: '#94A3B8' }}
+              >
+                <ArrowLeft size={14} />
+                Home
+              </button>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-7 h-7 rounded-lg flex items-center justify-center"
+                  style={{ background: 'rgba(249,115,22,0.1)' }}
+                >
+                  <Brain size={14} style={{ color: '#F97316' }} />
+                </div>
+                <span className="text-sm font-bold" style={{ color: '#1E3A5F' }}>MahaSahayak AI</span>
+              </div>
+            </div>
+
+            <h1 className="text-xl sm:text-2xl font-black mb-1" style={{ color: '#1E3A5F' }}>
               Sign In
             </h1>
-            <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
+            <p className="text-xs sm:text-sm mb-5 sm:mb-6" style={{ color: '#94A3B8' }}>
               Select your role and enter demo credentials
             </p>
 
             {/* Role selector */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-6 min-w-0">
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-2 mb-5 sm:mb-6 min-w-0">
               {roles.map((r) => {
                 const isActive = selectedRole === r.id;
                 return (
@@ -160,7 +181,7 @@ function LoginForm() {
                     key={r.id}
                     type="button"
                     onClick={() => handleRoleSelect(r.id)}
-                    className="flex flex-col items-center gap-1.5 p-3 rounded-xl border-2 transition-all"
+                    className="flex flex-col items-center gap-1 sm:gap-1.5 p-2 sm:p-3 rounded-xl border-2 transition-all"
                     style={{
                       borderColor: isActive ? r.color : '#E2E8F0',
                       background: isActive ? `${r.color}10` : 'transparent',

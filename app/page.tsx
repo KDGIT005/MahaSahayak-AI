@@ -226,55 +226,55 @@ export default function LandingPage() {
         />
 
         {/* Nav */}
-        <nav className="absolute top-0 left-0 right-0 px-4 md:px-8 py-5 flex flex-wrap items-center justify-between gap-3 z-20">
-          <div className="flex items-center gap-3">
+        <nav className="absolute top-0 left-0 right-0 px-4 md:px-8 py-4 md:py-5 flex items-center justify-between z-20">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center flex-shrink-0"
               style={{ background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)' }}
             >
-              <Brain size={22} color="white" />
+              <Brain size={20} color="white" />
             </div>
-            <div>
-              <span className="text-white font-black text-xl tracking-tight">MahaSahayak AI</span>
-              <span className="ml-2 text-xs font-medium px-2 py-0.5 rounded-full"
+            <div className="min-w-0">
+              <span className="text-white font-black text-base sm:text-xl tracking-tight">MahaSahayak AI</span>
+              <span className="hidden sm:inline ml-2 text-xs font-medium px-2 py-0.5 rounded-full"
                 style={{ background: 'rgba(245,158,11,0.3)', color: '#FCD34D' }}>
                 Mahakumbh 2028
               </span>
             </div>
           </div>
-            <div className="flex gap-2 sm:gap-3">
-              <button
-                onClick={() => {
-                  try {
-                    const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-                    if (select) {
-                      select.value = select.value === 'hi' ? 'en' : 'hi';
-                      select.dispatchEvent(new Event('change'));
-                    } else {
-                      const isHi = document.cookie.includes('googtrans=/en/hi');
-                      document.cookie = `googtrans=/en/${isHi ? 'en' : 'hi'}; path=/`;
-                      window.location.reload();
-                    }
-                  } catch(e) {}
-                }}
-                className="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-white font-semibold text-sm flex items-center gap-2 transition-all hover:bg-white hover:bg-opacity-10"
-                style={{ border: '1px solid rgba(255,255,255,0.3)' }}
-                title="Translate to Hindi / English"
-              >
-                <Globe size={16} />
-                <span className="hidden sm:inline">A/अ</span>
-              </button>
-              <button
-                onClick={() => router.push('/login')}
-                className="btn-primary"
-                style={{ background: 'rgba(255,255,255,0.95)', color: '#EA580C' }}
-              >
-                Sign In →
-              </button>
+          <div className="flex gap-2 sm:gap-3 flex-shrink-0">
+            <button
+              onClick={() => {
+                try {
+                  const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+                  if (select) {
+                    select.value = select.value === 'hi' ? 'en' : 'hi';
+                    select.dispatchEvent(new Event('change'));
+                  } else {
+                    const isHi = document.cookie.includes('googtrans=/en/hi');
+                    document.cookie = `googtrans=/en/${isHi ? 'en' : 'hi'}; path=/`;
+                    window.location.reload();
+                  }
+                } catch(e) {}
+              }}
+              className="w-9 h-9 sm:w-auto sm:h-auto sm:px-4 sm:py-2.5 rounded-xl text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all hover:bg-white hover:bg-opacity-10 flex-shrink-0"
+              style={{ border: '1px solid rgba(255,255,255,0.3)' }}
+              title="Translate to Hindi / English"
+            >
+              <Globe size={16} />
+              <span className="hidden sm:inline">A/अ</span>
+            </button>
+            <button
+              onClick={() => router.push('/login')}
+              className="btn-primary text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 flex-shrink-0"
+              style={{ background: 'rgba(255,255,255,0.95)', color: '#EA580C' }}
+            >
+              Sign In →
+            </button>
           </div>
         </nav>
 
-        <div className="container mx-auto px-4 pt-28 pb-12 relative z-10 w-full max-w-7xl">
+        <div className="container mx-auto px-4 pt-24 sm:pt-28 pb-12 relative z-10 w-full max-w-7xl">
           <div className="max-w-4xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
@@ -289,22 +289,22 @@ export default function LandingPage() {
             </div>
 
             {/* Main heading */}
-            <h1 className="text-5xl sm:text-6xl font-black text-white leading-tight mb-2">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-2">
               MahaSahayak AI
             </h1>
-            <p className="text-2xl font-medium mb-4" style={{ color: 'rgba(255,255,255,0.7)' }}>
+            <p className="text-lg sm:text-2xl font-medium mb-3 sm:mb-4" style={{ color: 'rgba(255,255,255,0.7)' }}>
               स्वयंसेवक प्रबंधन प्रणाली
             </p>
-            <p className="text-xl text-white font-semibold mb-3">
+            <p className="text-base sm:text-xl text-white font-semibold mb-2 sm:mb-3">
               AI-Powered Volunteer Deployment for Mahakumbh 2028
             </p>
-            <p className="text-base mb-10 max-w-2xl" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            <p className="text-sm sm:text-base mb-8 sm:mb-10 max-w-2xl" style={{ color: 'rgba(255,255,255,0.75)' }}>
               Managing 50,000+ volunteers across 10 critical zones with Google Gemini AI.
               Real-time deployment, emergency response, and burnout prevention — all in one platform.
             </p>
 
             {/* Live counters */}
-            <div className="flex flex-wrap gap-6 mb-10">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-6 mb-8 sm:mb-10">
               {[
                 { label: 'Volunteers', value: 1247, suffix: '+', icon: Users },
                 { label: 'Zones', value: 10, suffix: '', icon: MapPin },
@@ -313,19 +313,20 @@ export default function LandingPage() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex items-center gap-3 px-4 py-3 rounded-2xl"
+                  className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl"
                   style={{
                     background: 'rgba(255,255,255,0.1)',
                     border: '1px solid rgba(255,255,255,0.15)',
                     backdropFilter: 'blur(8px)',
                   }}
                 >
-                  <stat.icon size={18} style={{ color: '#FCD34D' }} />
-                  <div>
-                    <div className="text-xl font-black text-white">
+                  <stat.icon size={16} className="flex-shrink-0 sm:hidden" style={{ color: '#FCD34D' }} />
+                  <stat.icon size={18} className="flex-shrink-0 hidden sm:block" style={{ color: '#FCD34D' }} />
+                  <div className="min-w-0">
+                    <div className="text-base sm:text-xl font-black text-white">
                       <Counter target={stat.value} suffix={stat.suffix} />
                     </div>
-                    <div className="text-xs" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                    <div className="text-[10px] sm:text-xs" style={{ color: 'rgba(255,255,255,0.6)' }}>
                       {stat.label}
                     </div>
                   </div>
@@ -334,10 +335,10 @@ export default function LandingPage() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button
                 onClick={() => router.push('/login?role=admin')}
-                className="flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-base transition-all hover:scale-105"
+                className="flex items-center justify-center gap-2 px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all hover:scale-105 w-full sm:w-auto"
                 style={{
                   background: 'white',
                   color: '#EA580C',
@@ -350,7 +351,7 @@ export default function LandingPage() {
               </button>
               <button
                 onClick={() => router.push('/login?role=volunteer')}
-                className="flex items-center gap-2 px-7 py-4 rounded-xl font-semibold text-base transition-all"
+                className="flex items-center justify-center gap-2 px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all w-full sm:w-auto"
                 style={{
                   background: 'rgba(255,255,255,0.12)',
                   color: 'white',
@@ -388,10 +389,10 @@ export default function LandingPage() {
                 Role-Based Access
               </span>
             </div>
-            <h2 className="text-4xl font-black mb-4" style={{ color: '#1E3A5F' }}>
+            <h2 className="text-2xl sm:text-4xl font-black mb-4" style={{ color: '#1E3A5F' }}>
               Choose Your Portal
             </h2>
-            <p className="text-lg" style={{ color: '#64748B' }}>
+            <p className="text-sm sm:text-lg" style={{ color: '#64748B' }}>
               Three role-specific dashboards designed for real Mahakumbh operations
             </p>
           </div>
@@ -457,10 +458,10 @@ export default function LandingPage() {
       <section className="py-20 relative" style={{ background: '#1E3A5F' }}>
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-14">
-            <h2 className="text-4xl font-black text-white mb-4">
-              Built for the World's Largest Gathering
+            <h2 className="text-2xl sm:text-4xl font-black text-white mb-4">
+              Built for the World&apos;s Largest Gathering
             </h2>
-            <p className="text-lg" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <p className="text-sm sm:text-lg" style={{ color: 'rgba(255,255,255,0.6)' }}>
               Every feature engineered for the chaos and scale of Mahakumbh 2028
             </p>
           </div>
@@ -520,7 +521,7 @@ export default function LandingPage() {
           FOOTER
       ═══════════════════════════════════════════ */}
       <footer className="py-10 relative" style={{ background: '#0F1E33' }}>
-        <div className="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="container mx-auto px-4 max-w-7xl flex flex-col items-center gap-4 md:flex-row md:justify-between md:gap-6">
           <div className="flex items-center gap-3">
             <div
               className="w-8 h-8 rounded-lg flex items-center justify-center"
@@ -530,7 +531,7 @@ export default function LandingPage() {
             </div>
             <span className="text-white font-bold">MahaSahayak AI</span>
           </div>
-          <p className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+          <p className="text-xs sm:text-sm text-center" style={{ color: 'rgba(255,255,255,0.4)' }}>
             Built for Mahakumbh 2028 · Powered by Google Gemini AI · Developed by Kuldeep Dhangad
           </p>
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full"
