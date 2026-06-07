@@ -26,9 +26,9 @@
 
 <br/>
 
-> **Built for Mahakumbh Innovation Hackathon 2028** · Expert Hire × VIT Bhopal
->
-> *Crafted with ❤️ by **[Kuldeep Dhangad](https://github.com/KDGIT005)***
+**Built for Mahakumbh Innovation Hackathon 2028** · Expert Hire × VIT Bhopal
+
+*Crafted with ❤️ by **[Kuldeep Dhangad](https://github.com/KDGIT005)***
 
 ---
 
@@ -40,11 +40,11 @@ Mahakumbh 2028 brings together **over 400 million pilgrims** — making it the l
 
 Without intelligent systems, this creates cascading challenges:
 
--  **Skill mismatches** — Wrong volunteers assigned to wrong zones
--  **Burnout** — Uneven workloads leading to fatigue and dropouts
--  **Slow emergency response** — Manual searches costing precious seconds
--  **Language gaps** — Pilgrims from 50+ languages unable to find help
--  **No real-time visibility** — Coordinators flying blind with spreadsheets
+- **Skill mismatches** — Wrong volunteers assigned to wrong zones
+- **Burnout** — Uneven workloads leading to fatigue and dropouts
+- **Slow emergency response** — Manual searches costing precious seconds
+- **Language gaps** — Pilgrims from 50+ languages unable to find help
+- **No real-time visibility** — Coordinators flying blind with spreadsheets
 
 ---
 
