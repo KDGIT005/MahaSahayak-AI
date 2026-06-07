@@ -121,7 +121,7 @@ A live heatmap with pulse animations for critical zones, an activity feed, workl
 | **Framework** | Next.js 16 (App Router) | Full-stack React with server components |
 | **Language** | TypeScript 5 | End-to-end type safety |
 | **Styling** | Tailwind CSS v4 | Utility-first responsive design |
-| **AI Engine** | Google Gemini 3.5 Flash | Assignment, emergency, search & analysis |
+| **AI Engine** | Google Gemini 1.5 Flash | Assignment, emergency, search & analysis |
 | **Charts** | Recharts | Workload and analytics visualizations |
 | **Icons** | Lucide React | Consistent icon system |
 | **Deployment** | Vercel | Edge-optimized global deployment |
