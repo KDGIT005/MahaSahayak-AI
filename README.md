@@ -40,11 +40,11 @@ Mahakumbh 2028 brings together **over 400 million pilgrims** — making it the l
 
 Without intelligent systems, this creates cascading challenges:
 
-- ❌ **Skill mismatches** — Wrong volunteers assigned to wrong zones
-- ❌ **Burnout** — Uneven workloads leading to fatigue and dropouts
-- ❌ **Slow emergency response** — Manual searches costing precious seconds
-- ❌ **Language gaps** — Pilgrims from 50+ languages unable to find help
-- ❌ **No real-time visibility** — Coordinators flying blind with spreadsheets
+-  **Skill mismatches** — Wrong volunteers assigned to wrong zones
+-  **Burnout** — Uneven workloads leading to fatigue and dropouts
+-  **Slow emergency response** — Manual searches costing precious seconds
+-  **Language gaps** — Pilgrims from 50+ languages unable to find help
+-  **No real-time visibility** — Coordinators flying blind with spreadsheets
 
 ---
 
@@ -208,19 +208,6 @@ npm run dev
 | 🙋 Volunteer | `priya.verma@volunteerai.com` | `demo1234` |
 
 **Try the [Live Demo →](https://maha-sahayak-ai.vercel.app/)**
-
----
-
-## 🎬 5-Minute Demo Script
-
-| Step | Action | What to Show |
-|------|--------|-------------|
-| 1 | Landing page | Animated hero, Hindi subtitle, live counters |
-| 2 | Admin Dashboard | Zone heatmap — Sangam Ghat pulsing red, burnout alerts |
-| 3 | AI Optimize | Click "AI Optimize All" → Gemini analyses all 30 volunteers live |
-| 4 | Emergency Center | Simulate medical emergency → AI deploys responders in <3s |
-| 5 | AI Engine | NLP search: *"Find Hindi-speaking medical volunteers"* |
-| 6 | Volunteer Portal | Bharat Ready Score™ gauge animated with real-time score |
 
 ---
 
