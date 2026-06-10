@@ -70,12 +70,20 @@ export async function callGemini(prompt: string): Promise<string> {
     }
 
     // Assign AI Fallback
-    if (prompt.includes('Assign')) {
+    if (prompt.toLowerCase().includes('assign')) {
       return JSON.stringify({
-        "selected_volunteers": ["v-03", "v-04", "v-08", "v-12", "v-14"],
-        "confidence_score": 88,
-        "reasoning": "Selected volunteers have matching skills and low current workloads.",
-        "warnings": ["v-12 is approaching shift end in 1 hour"]
+        "selected_volunteer_ids": ["v-03", "v-04", "v-08", "v-12", "v-14"],
+        "assignment_reasoning": {
+          "v-03": "Selected for matching skills and low workload.",
+          "v-04": "Selected for matching skills and low workload.",
+          "v-08": "Selected for matching skills and low workload.",
+          "v-12": "Selected for matching skills and low workload.",
+          "v-14": "Selected for matching skills and low workload."
+        },
+        "shift_recommendation": "morning",
+        "confidence_score": 0.88,
+        "warnings": ["v-12 is approaching shift end in 1 hour"],
+        "coverage_summary": "5 volunteers assigned. Zone coverage: 100%"
       });
     }
 
