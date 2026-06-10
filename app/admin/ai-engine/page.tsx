@@ -156,7 +156,7 @@ export default function AIEnginePage() {
           Smart AI Assignment
         </h1>
         <p className="text-sm mt-0.5" style={{ color: '#94A3B8' }}>
-          Powered by Google Gemini 3.5 Flash · Instantly deploy volunteers where they are needed most
+          Powered by Google Gemini 2.5 Flash · Instantly deploy volunteers where they are needed most
         </p>
       </div>
       </ScrollReveal>
@@ -366,7 +366,7 @@ export default function AIEnginePage() {
                 style={{ background: 'rgba(249,115,22,0.06)', border: '1px solid rgba(249,115,22,0.15)' }}>
                 <Zap size={12} style={{ color: '#F97316' }} />
                 <span className="text-xs font-medium" style={{ color: '#F97316' }}>
-                  Google Gemini 3.5 Flash
+                  Google Gemini 2.5 Flash
                 </span>
               </div>
             </div>
@@ -383,7 +383,7 @@ export default function AIEnginePage() {
                     ? 'Finding best volunteers for zone...'
                     : 'Analyzing workforce health...'
                 }
-                subtext="Processing with Google Gemini 3.5 Flash"
+                subtext="Processing with Google Gemini 2.5 Flash"
               />
             </div>
           )}
